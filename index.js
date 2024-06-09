@@ -20,10 +20,7 @@ const transporter = nodemailer.createTransport({
 });
 
 app.get("/", (req, res) => {
-  return res.json({
-    email: process.env.GOOGLE_EMAIL,
-    pass: process.env.GOOGLE_APP_PASSWORD,
-  });
+  return res.json("Nodemailer service running!");
 });
 
 app.post("/send-email", (req, res) => {
